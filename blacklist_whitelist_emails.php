@@ -38,6 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if (@file_put_contents($target_file, $line_to_add, FILE_APPEND | LOCK_EX) !== false) {
                 @shell_exec("postmap " . escapeshellarg($target_file));
+                @shell_exec("systemctl reload postfix");
                 $message = "Successfully added " . htmlspecialchars($input) . " to " . $type . ".";
                 $should_clean_history = true;
             } else {
@@ -72,6 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $content = !empty($new_lines) ? implode("\n", $new_lines) . "\n" : "";
                 @file_put_contents($target_file, $content, LOCK_EX);
                 @shell_exec("postmap " . escapeshellarg($target_file));
+                @shell_exec("systemctl reload postfix");
                 $message = "Entry removed from " . $type . ".";
                 $should_clean_history = true;
             }
