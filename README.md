@@ -16,5 +16,6 @@ An intuitive management module for CentOS Web Panel (CWP) that allows administra
 
 Log into your server via SSH as the `root` user and run this single command to download and install the module automatically:
 
+
 ```bash
 curl -sSL [https://raw.githubusercontent.com/kxlxyxn/cwp-email-blacklist-whitelist/main/install.sh](https://raw.githubusercontent.com/kxlxyxn/cwp-email-blacklist-whitelist/main/install.sh) | bash
