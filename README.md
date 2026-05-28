@@ -18,4 +18,4 @@ Log into your server via SSH as the `root` user and run this single command to d
 
 
 ```bash
-curl -sSL [https://raw.githubusercontent.com/kxlxyxn/cwp-email-blacklist-whitelist/main/install.sh](https://raw.githubusercontent.com/kxlxyxn/cwp-email-blacklist-whitelist/main/install.sh) | bash
+curl -sSL https://raw.githubusercontent.com/kxlxyxn/cwp-email-blacklist-whitelist/main/install.sh | bash
